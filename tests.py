@@ -8,7 +8,7 @@ class AppTestCase(unittest.TestCase):
    def test_root_text(self):
         tester = app.test_client(self)
         response = tester.get('/')
-        print .format(os.environ['HOSTNAME'])
+        print os.environ['HOSTNAME']
         print response.data
         assert .format(os.environ['HOSTNAME']) in response.data
 
