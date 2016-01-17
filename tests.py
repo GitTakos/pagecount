@@ -10,7 +10,7 @@ class AppTestCase(unittest.TestCase):
         response = tester.get('/')
         print os.environ['HOSTNAME']
         print response.data
-        assert .format(os.environ['HOSTNAME']) in response.data
+        assert os.environ['HOSTNAME'] in response.data
 
 if __name__ == '__main__':
     unittest.main()
