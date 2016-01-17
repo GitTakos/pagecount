@@ -8,8 +8,7 @@ class AppTestCase(unittest.TestCase):
    def test_root_text(self):
         tester = app.test_client(self)
         response = tester.get('/')
-        assert 'Hello world!' in response.data
-        assert containsAny(.format(os.environ['HOSTNAME'])
+        assert containsAny('visitors')
 
 if __name__ == '__main__':
     unittest.main()
