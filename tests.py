@@ -9,6 +9,7 @@ class AppTestCase(unittest.TestCase):
         tester = app.test_client(self)
         response = tester.get('/')
         assert 'visitors' in response.data
+        print response.data
 
 if __name__ == '__main__':
     unittest.main()
