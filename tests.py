@@ -12,7 +12,7 @@ def containsAny(str, set):
    def test_root_text(self):
         tester = app.test_client(self)
         response = tester.get('/')
-        assert containsAny('visitors')
+        assert containsAny('visitors',response)
 
 if __name__ == '__main__':
     unittest.main()
