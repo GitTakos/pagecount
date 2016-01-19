@@ -9,7 +9,7 @@ def hello():
     redis.incr('hits')
     thisport = int(os.environ.get('PORT', 80))
     return ('Welcome to my homepage on Docker, served by {}! '
-            'There were {} visitors on this page. Port is '+thisport
+            'There were {} visitors on this page.'
             .format(os.environ['HOSTNAME'], redis.get('hits')))
 
 if __name__ == "__main__":
